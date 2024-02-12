@@ -7,6 +7,8 @@ public class Main {
         Fibonacci.run();
         // Question 3: Power of Two
         PowerOfTwo.run();
+        // Question 4: Capitalize Words
+        CapitalizeWords.run();
     }
 }
 
@@ -60,5 +62,30 @@ class PowerOfTwo {
         System.out.println(num + "=> returns " + isPowerOfTwo(num));
         num = 6; // Example input
         System.out.println(num + "=> returns " + isPowerOfTwo(num));
+    }
+}
+
+// Question 4: Capitalize Words
+// Write a program that accepts a string as input, capitalizes the first letter of each word in the
+// string, and then returns the result string.
+
+class CapitalizeWords {
+    public static String capitalizeWords(String input) {
+        char[] chars = input.toLowerCase().toCharArray();
+        boolean found = false;
+        for (int i = 0; i < chars.length; i++) {
+            if (!found && Character.isLetter(chars[i])) {
+                chars[i] = Character.toUpperCase(chars[i]);
+                found = true;
+            } else if (Character.isWhitespace(chars[i])) {
+                found = false;
+            }
+        }
+        return String.valueOf(chars);
+    }
+
+    public static void run() {
+        String input = "i love programming"; // Example input
+        System.out.println(capitalizeWords(input));
     }
 }
