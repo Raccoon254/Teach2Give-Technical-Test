@@ -2,15 +2,21 @@
 public class Main {
     public static void main(String[] args) {
         // Question 1: FizzBuzz
+        System.out.println("Question 1: FizzBuzz");
         FizzBuzz.run();
+        System.out.println("\n\nQuestion 2: Fibonacci Sequence");
         // Question 2: Fibonacci Sequence
         Fibonacci.run();
+        System.out.println("\n\nQuestion 3: Power of Two");
         // Question 3: Power of Two
         PowerOfTwo.run();
+        System.out.println("\n\nQuestion 4: Capitalize Words");
         // Question 4: Capitalize Words
         CapitalizeWords.run();
+        System.out.println("\n\nQuestion 5: Reverse Integer");
         // Question 5: Reverse Integer
         ReverseInteger.run();
+        System.out.println("\n\nQuestion 6: Count Vowels");
         // Question 6: Count Vowels
         CountVowels.run();
     }
@@ -23,16 +29,20 @@ public class Main {
 class FizzBuzz {
     public static void run() {
         for (int i = 1; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
+            if (isDivisible(i, 3) && isDivisible(i, 5)) {
                 System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
+            } else if (isDivisible(i, 3)) {
                 System.out.println("Fizz");
-            } else if (i % 5 == 0) {
+            } else if (isDivisible(i, 5)) {
                 System.out.println("Buzz");
             } else {
                 System.out.println(i);
             }
         }
+    }
+
+    static boolean isDivisible(int a, int b) {
+        return a % b == 0;
     }
 }
 
@@ -57,14 +67,20 @@ class Fibonacci {
 
 class PowerOfTwo {
     public static boolean isPowerOfTwo(int n) {
-        return (n > 0) && ((n & (n - 1)) == 0);
+        if (n <= 0) {
+            return false;
+        }
+        while (n % 2 == 0) {
+            n = n / 2;
+        }
+        return n == 1;
     }
 
     public static void run() {
-        int num = 8; // Example input
-        System.out.println(num + "=> returns " + isPowerOfTwo(num));
-        num = 6; // Example input
-        System.out.println(num + "=> returns " + isPowerOfTwo(num));
+        int num = 8;
+        System.out.println(num + " = returns " + isPowerOfTwo(num));
+        num = 6;
+        System.out.println(num + " = returns " + isPowerOfTwo(num));
     }
 }
 
@@ -88,8 +104,8 @@ class CapitalizeWords {
     }
 
     public static void run() {
-        String input = "i love programming"; // Example input
-        System.out.println(capitalizeWords(input));
+        String input = "i love programming";
+        System.out.println(capitalizeWords(input) + " is the capitalized version of " + input);
     }
 }
 
@@ -113,8 +129,8 @@ class ReverseInteger {
     }
 
     public static void run() {
-        int input = 123; // Example input
-        System.out.println(reverse(input));
+        int input = 123;
+        System.out.println(reverse(input) + " is the reverse of " + input);
     }
 }
 
@@ -137,6 +153,6 @@ class CountVowels {
 
     public static void run() {
         String input = "Hello World"; // Example input
-        System.out.println(countVowels(input) + " vowels found.");
+        System.out.println(countVowels(input) + " vowels found in the sentence [" + input + "]");
     }
 }
