@@ -11,6 +11,8 @@ public class Main {
         CapitalizeWords.run();
         // Question 5: Reverse Integer
         ReverseInteger.run();
+        // Question 6: Count Vowels
+        CountVowels.run();
     }
 }
 
