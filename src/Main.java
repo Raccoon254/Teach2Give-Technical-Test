@@ -5,6 +5,8 @@ public class Main {
         FizzBuzz.run();
         // Question 2: Fibonacci Sequence
         Fibonacci.run();
+        // Question 3: Power of Two
+        PowerOfTwo.run();
     }
 }
 
@@ -42,5 +44,21 @@ class Fibonacci {
             firstTerm = secondTerm;
             secondTerm = nextTerm;
         }
+    }
+}
+
+// Question 3: Power of Two
+// Write a program that takes an integer as input and returns true if the input is a power of two.
+
+class PowerOfTwo {
+    public static boolean isPowerOfTwo(int n) {
+        return (n > 0) && ((n & (n - 1)) == 0);
+    }
+
+    public static void run() {
+        int num = 8; // Example input
+        System.out.println(num + "=> returns " + isPowerOfTwo(num));
+        num = 6; // Example input
+        System.out.println(num + "=> returns " + isPowerOfTwo(num));
     }
 }
