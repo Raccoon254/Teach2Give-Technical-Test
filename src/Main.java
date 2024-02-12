@@ -89,3 +89,28 @@ class CapitalizeWords {
         System.out.println(capitalizeWords(input));
     }
 }
+
+
+// Question 5: Reverse Integer
+// Write a program that takes an integer as input and returns an integer with reversed digit
+// ordering.
+
+class ReverseInteger {
+    public static int reverse(int x) {
+        long reversed = 0;
+        while (x != 0) {
+            reversed = reversed * 10 + x % 10;
+            x /= 10;
+        }
+        if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
+            return 0;
+        } else {
+            return (int) reversed;
+        }
+    }
+
+    public static void run() {
+        int input = 123; // Example input
+        System.out.println(reverse(input));
+    }
+}
