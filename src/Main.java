@@ -16,11 +16,10 @@ public class Main {
     }
 }
 
-// Question 1: FizzBuzz
-// Write a program that prints the numbers from 1 to 100. For multiples of 3, print "Fizz"; for
-// multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5, print
-// "FizzBuzz".
-
+//Question 1: FizzBuzz
+//Write a program that prints the numbers from 1 to 100. For multiples of 3, print "Fizz"; for
+//multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5, print
+//"FizzBuzz".
 class FizzBuzz {
     public static void run() {
         for (int i = 1; i <= 100; i++) {
@@ -37,8 +36,8 @@ class FizzBuzz {
     }
 }
 
-// Question 2: Fibonacci Sequence
-// Write a program to generate the Fibonacci sequence up to 100.
+//Question 2: Fibonacci Sequence
+//Write a program to generate the Fibonacci sequence up to 100.
 
 class Fibonacci {
     public static void run() {
@@ -53,8 +52,8 @@ class Fibonacci {
     }
 }
 
-// Question 3: Power of Two
-// Write a program that takes an integer as input and returns true if the input is a power of two.
+//Question 3: Power of Two
+//Write a program that takes an integer as input and returns true if the input is a power of two.
 
 class PowerOfTwo {
     public static boolean isPowerOfTwo(int n) {
@@ -69,9 +68,9 @@ class PowerOfTwo {
     }
 }
 
-// Question 4: Capitalize Words
-// Write a program that accepts a string as input, capitalizes the first letter of each word in the
-// string, and then returns the result string.
+//Question 4: Capitalize Words
+//Write a program that accepts a string as input, capitalizes the first letter of each word in the
+//string, and then returns the result string.
 
 class CapitalizeWords {
     public static String capitalizeWords(String input) {
@@ -95,9 +94,9 @@ class CapitalizeWords {
 }
 
 
-// Question 5: Reverse Integer
-// Write a program that takes an integer as input and returns an integer with reversed digit
-// ordering.
+//Question 5: Reverse Integer
+//Write a program that takes an integer as input and returns an integer with reversed digit
+//ordering.
 
 class ReverseInteger {
     public static int reverse(int x) {
@@ -120,8 +119,8 @@ class ReverseInteger {
 }
 
 
-// Question 6: Count Vowels
-// Write a program that counts the number of vowels in a sentence.
+//Question 6: Count Vowels
+//Write a program that counts the number of vowels in a sentence.
 
 class CountVowels {
     public static int countVowels(String input) {
