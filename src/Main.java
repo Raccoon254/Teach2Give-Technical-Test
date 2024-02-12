@@ -9,6 +9,8 @@ public class Main {
         PowerOfTwo.run();
         // Question 4: Capitalize Words
         CapitalizeWords.run();
+        // Question 5: Reverse Integer
+        ReverseInteger.run();
     }
 }
 
