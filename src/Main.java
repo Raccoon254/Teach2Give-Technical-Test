@@ -3,6 +3,8 @@ public class Main {
     public static void main(String[] args) {
         // Question 1: FizzBuzz
         FizzBuzz.run();
+        // Question 2: Fibonacci Sequence
+        Fibonacci.run();
     }
 }
 
@@ -27,3 +29,18 @@ class FizzBuzz {
     }
 }
 
+// Question 2: Fibonacci Sequence
+// Write a program to generate the Fibonacci sequence up to 100.
+
+class Fibonacci {
+    public static void run() {
+        int n = 100, firstTerm = 0, secondTerm = 1;
+        System.out.println("Fibonacci Series up to " + n + ":");
+        while (firstTerm <= n) {
+            System.out.print(firstTerm + " ");
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
